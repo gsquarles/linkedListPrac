@@ -158,7 +158,7 @@ class linkedList{
     }
 }
 
-let list = new linkedList();
+/*let list = new linkedList();
 list.append(2);
 list.append(3);
 list.append(4);
@@ -171,4 +171,4 @@ list.remove(2);
 console.log(list.toString());
 list.remove(3);
 console.log(list.toString());
-
+*/
