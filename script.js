@@ -32,7 +32,7 @@ class linkedList{
 
     size(){
         //Check if list is empty
-        if(!this.head) return 0;
+        if(!this.head) return null;
         let tail = this.head;
         let total = 1;
         while(tail.next !== null){
@@ -80,7 +80,7 @@ class linkedList{
 
     contains(value){
         //Check if list is empty
-        if(!this.head) return false;
+        if(!this.head) return null;
         let node = this.head;
         while(node !== null){
             if(node.value === value){
