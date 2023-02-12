@@ -33,10 +33,10 @@ class linkedList{
     size(){
         //Check if list is empty
         if(!this.head) return null;
-        let tail = this.head;
-        let total = 1;
-        while(tail.next !== null){
-            tail = tail.next;
+        let counter = this.head;
+        let total = 0;
+        while(counter !== null){
+            counter = counter.next;
             total++;
         }
         return total;
@@ -67,15 +67,21 @@ class linkedList{
             node = node.next;
             counter ++;
         }
-        return node;
+        return node ? node : null;
     }
 
     pop(){
-        //Check if list is empty
+        //For empty list
         if(!this.head) return null;
-        let index = this.size() - 2;
-        let node = this.at(index);
-        node.next = null;
+        //For one node list
+        if(!this.head.next){
+            this.head = null;
+            return;
+        }
+
+        let pointerBeforeTail = this.at(this.size() - 2);
+        pointerBeforeTail.next = null;
+        
     }
 
     contains(value){
@@ -166,9 +172,5 @@ list.append(5);
 list.append(6);
 list.prepend(1);
 console.log(list);
-console.log(list.toString());
-list.remove(2);
-console.log(list.toString());
-list.remove(3);
-console.log(list.toString());
 */
+
